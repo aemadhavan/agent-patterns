@@ -1,0 +1,46 @@
+{
+  "it_helpdesk": [
+    {
+      "topic": "vpn",
+      "title": "Corporate VPN Troubleshooting",
+      "content": "Reset GlobalProtect VPN by signing out, clearing cached credentials in Keychain/Credential Manager, and re-authenticating with Okta MFA. If error 403 persists, request VPN-Users group access via IT ticket."
+    },
+    {
+      "topic": "password",
+      "title": "Password Reset Policy",
+      "content": "Passwords expire every 180 days. Use https://id.acme.internal/reset with Okta Verify push. Minimum 14 characters, no reuse of last 5 passwords."
+    }
+  ],
+  "orders": {
+    "ORD-4821": {
+      "status": "in_transit_delayed",
+      "carrier": "FastFreight",
+      "tracking_id": "FF-99201",
+      "customer": "Priya Nair",
+      "expected_delivery": "2026-11-20"
+    }
+  },
+  "carrier_updates": {
+    "FF-99201": {
+      "location": "Sydney West Distribution Depot",
+      "reason": "Severe weather hold; rescheduled for next morning dispatch",
+      "new_eta": "2026-11-23"
+    }
+  },
+  "finance": {
+    "operating_balance_usd": 42500.00,
+    "upcoming_payables": [
+      {"vendor": "CloudHost AWS", "amount_usd": 14200.00, "due_date": "2026-11-28"},
+      {"vendor": "Payroll Reserve", "amount_usd": 18000.00, "due_date": "2026-11-30"}
+    ],
+    "minimum_cash_buffer_usd": 5000.00
+  },
+  "policies": [
+    {
+      "id": "POL-PROC-2026",
+      "title": "2026 Procurement & Software Spend Policy",
+      "effective_date": "2026-01-01",
+      "content": "Purchases under $2,000 require manager approval. Purchases between $2,000 and $10,000 require VP Finance sign-off and must preserve at least $5,000 in operating cash buffer after upcoming 14-day payables. Purchases over $10,000 require CFO approval."
+    }
+  ]
+}

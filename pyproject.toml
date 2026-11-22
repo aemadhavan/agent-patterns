@@ -1,0 +1,23 @@
+[project]
+name = "agent-design-patterns-playbook"
+version = "0.1.0"
+description = "Hands-on playbook & benchmark of 14 AI Agent Design Patterns using Anthropic Claude, LangGraph, and Arize Phoenix."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.45.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langgraph>=0.2.0",
+    "python-dotenv>=1.0.1",
+    "rich>=13.9.0",
+    "arize-phoenix>=5.0.0",
+    "arize-phoenix-otel>=0.7.0",
+    "openinference-instrumentation-anthropic>=0.1.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = [
+    "live: marks tests that call the live Anthropic API (deselect with '-m \"not live\"')",
+]
