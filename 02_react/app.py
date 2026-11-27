@@ -8,7 +8,7 @@ seeing a carrier delay, then fetching the live carrier depot update before reply
 
 import sys
 from pathlib import Path
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from shared.llm import get_llm
@@ -23,10 +23,10 @@ SYSTEM_PROMPT = (
 
 
 def build_agent():
-    return create_react_agent(
+    return create_agent(
         model=get_llm(),
         tools=[get_order_status, get_carrier_update],
-        prompt=SYSTEM_PROMPT,
+        system_prompt=SYSTEM_PROMPT,
     )
 
 

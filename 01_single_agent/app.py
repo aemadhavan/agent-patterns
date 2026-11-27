@@ -7,7 +7,7 @@ the knowledge base, and raises a ticket if it cannot resolve the issue.
 
 import sys
 from pathlib import Path
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from shared.llm import get_llm
@@ -21,10 +21,10 @@ SYSTEM_PROMPT = (
 
 
 def build_agent():
-    return create_react_agent(
+    return create_agent(
         model=get_llm(),
         tools=[search_it_kb, create_it_ticket],
-        prompt=SYSTEM_PROMPT,
+        system_prompt=SYSTEM_PROMPT,
     )
 
 

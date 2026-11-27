@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain_anthropic import ChatAnthropic
 from langchain_core.callbacks import BaseCallbackHandler
 
-load_dotenv()
+load_dotenv(override=True)  # .env wins over stray shell/IDE-injected keys
 
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
 _client: Anthropic | None = None
